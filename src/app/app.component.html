@@ -8,7 +8,19 @@
 </p>
 <p>{{ array }}</p> -->
 
-<img [src]="img" alt="" width="50px">
+<!-- <img [src]="img" alt="" width="50px"> -->
+
+<input
+  type="text"
+  (keyup.enter)="onInput($event)"
+  (blur)="onBlur(myInput.value)"
+  #myInput
+/>
+<p>
+  <strong>{{ inputValue }}</strong>
+</p>
+
+<button (click)="onClick()">Click me!</button>
 
 <hr />
 <app-post></app-post>
