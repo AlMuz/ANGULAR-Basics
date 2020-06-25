@@ -16,6 +16,9 @@ export class AppComponent {
   inputValue = '';
 
   newTitle = '';
+
+  backgroundToggle = false;
+
   // it must be after variable init
   constructor() {
     setTimeout(() => {
@@ -39,6 +42,6 @@ export class AppComponent {
   }
 
   onInputTitle(event: any) {
-    this.newTitle = event.target.value
+    this.newTitle = event.target.value;
   }
 }
