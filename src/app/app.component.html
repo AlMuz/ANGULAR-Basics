@@ -10,7 +10,7 @@
 
 <!-- <img [src]="img" alt="" width="50px"> -->
 
-<input
+<!-- <input
   type="text"
   (keyup.enter)="onInput($event)"
   (blur)="onBlur(myInput.value)"
@@ -24,4 +24,8 @@
 
 <hr />
 <app-post></app-post>
-<app-post2></app-post2>
+<app-post2></app-post2> -->
+
+<input type="text" [(ngModel)]="newTitle" />
+
+<p>{{ newTitle }}</p>

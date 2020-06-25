@@ -14,6 +14,8 @@ export class AppComponent {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png';
 
   inputValue = '';
+
+  newTitle = '';
   // it must be after variable init
   constructor() {
     setTimeout(() => {
@@ -29,10 +31,14 @@ export class AppComponent {
 
   onBlur(value: string) {
     console.log(value);
-    this.inputValue = value
+    this.inputValue = value;
   }
 
   onClick() {
     console.log('click');
+  }
+
+  onInputTitle(event: any) {
+    this.newTitle = event.target.value
   }
 }
