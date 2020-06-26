@@ -55,11 +55,17 @@
   <p class="blue">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, iure!</p>
 </ng-template> -->
 
-
-<button (click)="switchToggle = !switchToggle">Toogle switch</button>
+<!-- <button (click)="switchToggle = !switchToggle">Toogle switch</button>
 
 <div [ngSwitch]="switchToggle">
   <p *ngSwitchCase="true" class="red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, perferendis?</p>
   <p *ngSwitchCase="false" class="blue">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, ducimus!</p>
   <p *ngSwitchDefault>default</p>
-</div>
+</div> -->
+
+<ul>
+  <li *ngFor="let number of fibArray; let idx = index">
+    <strong>{{ idx }}</strong>
+    {{ number }}
+  </li>
+</ul>

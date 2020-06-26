@@ -21,6 +21,8 @@ export class AppComponent {
   toggle = false;
   switchToggle = false;
 
+  fibArray = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55];
+
   // it must be after variable init
   constructor() {
     setTimeout(() => {
