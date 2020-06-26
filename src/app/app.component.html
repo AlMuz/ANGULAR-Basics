@@ -32,7 +32,7 @@
 
 <button (click)="backgroundToggle = !backgroundToggle">Toogle</button>
 
-<div
+<!-- <div
   [ngStyle]="{
     width: '200px',
     height: '200px',
@@ -40,4 +40,10 @@
     border: '1px solid black',
     background: backgroundToggle ? 'red' : 'blue'
   }"
-></div>
+></div> -->
+
+<p [ngClass]="{ red: backgroundToggle, blue: !backgroundToggle }">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, culpa.
+</p>
+
+<p [class.blue]="backgroundToggle" [class.red]="!backgroundToggle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo odio culpa illum voluptate voluptas cumque vel eum officia inventore alias.</p>
