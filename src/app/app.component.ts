@@ -18,6 +18,7 @@ export class AppComponent {
   newTitle = '';
 
   backgroundToggle = false;
+  toggle = false;
 
   // it must be after variable init
   constructor() {
