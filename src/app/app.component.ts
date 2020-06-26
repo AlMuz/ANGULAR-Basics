@@ -13,26 +13,36 @@ export class AppComponent {
   img =
     'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png';
 
+  react = false;
   inputValue = '';
 
   newTitle = '';
 
+  styleToggle = false;
   backgroundToggle = false;
   toggle = false;
   switchToggle = false;
 
   fibArray = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55];
 
-  now: Date = new Date()
+  now: Date = new Date();
 
-  // it must be after variable init
+  // contstructor always must be after the variables initialization
   constructor() {
-    setTimeout(() => {
-      this.img =
-        'https://w7.pngwing.com/pngs/669/188/png-transparent-react-javascript-vue-js-logo-science-experiments-logo-symmetry-business.png';
-    }, 2000);
+    this.timeoutFunction();
   }
 
+  private timeoutFunction() {
+    setTimeout(() => {
+      this.react = !this.react;
+      this.img = this.react
+      ? 'https://w7.pngwing.com/pngs/669/188/png-transparent-react-javascript-vue-js-logo-science-experiments-logo-symmetry-business.png'
+      : 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png';
+      this.timeoutFunction();
+    }, 2000);
+  }
+  
+  // after contstuctor goes functions which are available from template
   onInput(event: KeyboardEvent) {
     console.log('event', event);
     this.inputValue = (<HTMLInputElement>event.target).value;
@@ -44,7 +54,7 @@ export class AppComponent {
   }
 
   onClick() {
-    console.log('click');
+    alert('click');
   }
 
   onInputTitle(event: any) {

@@ -1,73 +1,124 @@
 <h1>Hello Angular!</h1>
+<h2>Small basic examples</h2>
 
-<!-- <p>
-  {{ title }}
-</p>
-<p>
-  <i>{{ number - 11 }}</i>
-</p>
-<p>{{ array }}</p> -->
+<details>
+  <summary>Components example</summary>
+  <app-post></app-post>
+  <app-post2></app-post2>
+</details>
 
-<!-- <img [src]="img" alt="" width="50px"> -->
+<details>
+  <summary>Titles from component</summary>
+  <p>
+    {{ title }}
+  </p>
+  <p>
+    <i>{{ number - 11 }}</i>
+  </p>
+  <p>{{ array }}</p>
+</details>
 
-<!-- <input
-  type="text"
-  (keyup.enter)="onInput($event)"
-  (blur)="onBlur(myInput.value)"
-  #myInput
-/>
-<p>
-  <strong>{{ inputValue }}</strong>
-</p>
+<details>
+  <summary>Image example with timeout</summary>
+  <img [src]="img" alt="" width="50px" />
+</details>
 
-<button (click)="onClick()">Click me!</button>
+<details>
+  <summary>Input example</summary>
+  <input
+    type="text"
+    (keyup.enter)="onInput($event)"
+    (blur)="onBlur(myInput.value)"
+    #myInput
+  />
+  <p>
+    <strong>{{ inputValue }}</strong>
+  </p>
+</details>
 
-<hr />
-<app-post></app-post>
-<app-post2></app-post2> -->
+<details>
+  <summary>Another input example with 2 way binding</summary>
+  <input type="text" [(ngModel)]="newTitle" />
 
-<!-- <input type="text" [(ngModel)]="newTitle" />
+  <p>{{ newTitle }}</p>
+</details>
 
-<p>{{ newTitle }}</p> -->
+<details>
+  <summary>Button click event</summary>
+  <button (click)="onClick()">Click me!</button>
+</details>
 
-<!-- <button (click)="backgroundToggle = !backgroundToggle">Toogle</button> -->
+<details>
+  <summary>ngStyle example</summary>
+  <button (click)="styleToggle = !styleToggle">Toogle</button>
 
-<!-- <div
-  [ngStyle]="{
-    width: '200px',
-    height: '200px',
-    borderRadius: '5px',
-    border: '1px solid black',
-    background: backgroundToggle ? 'red' : 'blue'
-  }"
-></div> -->
+  <div
+    [ngStyle]="{
+      width: '200px',
+      height: '200px',
+      borderRadius: '5px',
+      border: '1px solid black',
+      background: styleToggle ? 'red' : 'blue'
+    }"
+  ></div>
+</details>
 
-<!-- <p [ngClass]="{ red: backgroundToggle, blue: !backgroundToggle }">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, culpa.
-</p>
+<details>
+  <summary>Class example</summary>
+  <button (click)="backgroundToggle = !backgroundToggle">Toogle</button>
 
-<p [class.blue]="backgroundToggle" [class.red]="!backgroundToggle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo odio culpa illum voluptate voluptas cumque vel eum officia inventore alias.</p> -->
+  <p [ngClass]="{ red: backgroundToggle, blue: !backgroundToggle }">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, culpa.
+  </p>
 
-<!-- <button (click)="toggle = !toggle">Toogle paragraph</button>
+  <p [class.blue]="backgroundToggle" [class.red]="!backgroundToggle">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo odio culpa
+    illum voluptate voluptas cumque vel eum officia inventore alias.
+  </p>
+</details>
 
-<p *ngIf="toggle; else blueParagraph" class="red">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, iure!</p>
-<ng-template #blueParagraph>
-  <p class="blue">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, iure!</p>
-</ng-template> -->
+<details>
+  <summary>IF else example</summary>
+  <button (click)="toggle = !toggle">Toogle paragraph</button>
 
-<!-- <button (click)="switchToggle = !switchToggle">Toogle switch</button>
+  <p *ngIf="toggle; else blueParagraph" class="red">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, iure!
+  </p>
+  <ng-template #blueParagraph>
+    <p class="blue">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, iure!
+    </p>
+  </ng-template>
+</details>
 
-<div [ngSwitch]="switchToggle">
-  <p *ngSwitchCase="true" class="red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, perferendis?</p>
-  <p *ngSwitchCase="false" class="blue">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, ducimus!</p>
-  <p *ngSwitchDefault>default</p>
-</div> -->
+<details>
+  <summary>Switch example</summary>
+  <button (click)="switchToggle = !switchToggle">Toogle switch</button>
 
-<!-- <ul>
-  <li *ngFor="let number of fibArray; let idx = index">
-    <strong>{{ idx }}</strong>
-    {{ number }}
-  </li>
-</ul> -->
+  <div [ngSwitch]="switchToggle">
+    <p *ngSwitchCase="true" class="red">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,
+      perferendis?
+    </p>
+    <p *ngSwitchCase="false" class="blue">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, ducimus!
+    </p>
+    <p *ngSwitchDefault>default</p>
+  </div>
+</details>
 
-<p>{{ now | date }}</p>
+<details>
+  <summary>Fib array example</summary>
+  <ul>
+    <li *ngFor="let number of fibArray; let idx = index">
+      <strong>{{ idx }}</strong>
+      {{ number }}
+    </li>
+  </ul>
+</details>
+
+<details>
+  <summary>Pipe example</summary>
+  <h3>It is something like filter in VUE</h3>
+  <p>{{ now | date }}</p>
+</details>
