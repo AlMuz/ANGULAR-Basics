@@ -19,6 +19,7 @@ export class AppComponent {
 
   backgroundToggle = false;
   toggle = false;
+  switchToggle = false;
 
   // it must be after variable init
   constructor() {
